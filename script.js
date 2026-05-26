@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsFinanciado = document.getElementById('results-financiado');
     const resultsContado = document.getElementById('results-contado');
     const form = document.getElementById('calculator-form');
-    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:8080' 
-    : 'https://calculadorafinancieraa-1.onrender.com';
+    
+   // const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    // ? 'http://localhost:8080' 
+    // : 'https://calculadorafinancieraa-1.onrender.com';
+    const API_BASE_URL = 'https://calculadorafinancieraa-1.onrender.com';
 
     // Renderiza cada resultado y aplica color según su posición
     function renderResults(container, data, esConSeguro) {

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financiera</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1 class="main-title">Calculadora Financiera</h1>
+
+        <!-- Main financial calculator UI -->
+        <form id="calculator-form">
+            <fieldset class="section-box">
+            <legend>Datos del vehículo</legend>
+            <div class="input-group">
+                <label class="input-label">Fecha de Matriculación</label>
+                <input type="date" name="fechaMatriculacion" class="input-field" value="2026-05-26">
+                
+                <span class="input-icon"><i class="fa-regular fa-calendar"></i></span>
+            </div>
+        </fieldset>
+            <div class="grid-2-col">
+                
+                <fieldset class="section-box">
+                    <legend>Financiado</legend>
+                    <div class="input-group">
+                        <label class="input-label">Precio</label>
+                        <input type="number" name="precioFinanciado" class="input-field" placeholder="0"> 
+                        <span class="input-suffix">€</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Interés</label>
+                        <select name="tinFinanciado" class="input-field select-field">
+                            <option value="">Seleccionar tipo</option>
+                            <option value="4.59">TIN 4.59%</option>
+                            <option value="4.99">TIN 4.99%</option>
+                            <option value="5.25">TIN 5.25%</option>
+                            <option value="5.49">TIN 5.49%</option>
+                            <option value="5.5">TIN 5.5%</option>
+                            <option value="5.75">TIN 5.75%</option>
+                            <option value="5.99">TIN 5.99%</option>
+                            <option value="6.25">TIN 6.25%</option>
+                            <option value="6.49">TIN 6.49%</option>
+                            <option value="6.5">TIN 6.5%</option>
+                            <option value="6.74">TIN 6.74%</option>
+                            <option value="6.75">TIN 6.75%</option>
+                            <option value="6.99">TIN 6.99%</option>
+                            <option value="7.24">TIN 7.24%</option>
+                            <option value="7.25">TIN 7.25%</option>
+                            <option value="7.49">TIN 7.49%</option>
+                            <option value="7.5">TIN 7.5%</option>
+                            <option value="7.74">TIN 7.74%</option>
+                            <option value="7.75">TIN 7.75%</option>
+                            <option value="7.99">TIN 7.99%</option>
+                            <option value="8.24">TIN 8.24%</option>
+                            <option value="8.25">TIN 8.25%</option>
+                            <option value="8.49">TIN 8.49%</option>
+                            <option value="8.5">TIN 8.5%</option>
+                            <option value="8.74">TIN 8.74%</option>
+                            <option value="8.75">TIN 8.75%</option>
+                            <option value="8.99">TIN 8.99%</option>
+                            <option value="9.23">TIN 9.23%</option>
+                            <option value="9.24">TIN 9.24%</option>
+                            <option value="9.25">TIN 9.25%</option>
+                            <option value="9.49">TIN 9.49%</option>
+                            <option value="9.5">TIN 9.5%</option>
+                            <option value="9.74">TIN 9.74%</option>
+                            <option value="9.75">TIN 9.75%</option>
+                            <option value="9.99">TIN 9.99%</option>
+                            <option value="10.24">TIN 10.24%</option>
+                            <option value="10.25">TIN 10.25%</option>
+                            <option value="10.49">TIN 10.49%</option>
+                            <option value="10.5">TIN 10.5%</option>
+                            <option value="10.74">TIN 10.74%</option>
+                            <option value="10.99">TIN 10.99%</option>
+                            <option value="11.24">TIN 11.24%</option>
+                            <option value="11.99">TIN 11.99%</option>
+                            <option value="12.00">TIN 12.00%</option>
+                            <option value="12.65">TIN 12.65%</option>
+                            <option value="12.77">TIN 12.77%</option>
+                            <option value="12.99">TIN 12.99%</option>
+                            <option value="13.00">TIN 13.00%</option>
+                            <option value="13.13">TIN 13.13%</option>
+                            <option value="13.75">TIN 13.75%</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Plazo</label>
+                        <select name="plazoFinanciado" class="input-field select-field">
+                            <option value="">Seleccionar meses</option>
+                            <option value="24">24 meses</option>
+                            <option value="36">36 meses</option>
+                            <option value="48">48 meses</option>
+                            <option value="60">60 meses</option>
+                            <option value="72">72 meses</option>
+                            <option value="84">84 meses</option>
+                            <option value="96">96 meses</option>
+                            <option value="108">108 meses</option>
+                            <option value="120">120 meses</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="section-box">
+                    <legend>Al Contado</legend>
+                    <div class="input-group">
+                        <label class="input-label">Precio</label>
+                        <input type="number" name="precioContado" class="input-field" placeholder="0">
+                        <span class="input-suffix">€</span>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Interés</label>
+                        <select name="tinContado" class="input-field select-field">
+                            <option value="">Seleccionar tipo</option>
+                            <option value="4.59">TIN 4.59%</option>
+                            <option value="4.99">TIN 4.99%</option>
+                            <option value="5.25">TIN 5.25%</option>
+                            <option value="5.49">TIN 5.49%</option>
+                            <option value="5.5">TIN 5.5%</option>
+                            <option value="5.75">TIN 5.75%</option>
+                            <option value="5.99">TIN 5.99%</option>
+                            <option value="6.25">TIN 6.25%</option>
+                            <option value="6.49">TIN 6.49%</option>
+                            <option value="6.5">TIN 6.5%</option>
+                            <option value="6.74">TIN 6.74%</option>
+                            <option value="6.75">TIN 6.75%</option>
+                            <option value="6.99">TIN 6.99%</option>
+                            <option value="7.24">TIN 7.24%</option>
+                            <option value="7.25">TIN 7.25%</option>
+                            <option value="7.49">TIN 7.49%</option>
+                            <option value="7.5">TIN 7.5%</option>
+                            <option value="7.74">TIN 7.74%</option>
+                            <option value="7.75">TIN 7.75%</option>
+                            <option value="7.99">TIN 7.99%</option>
+                            <option value="8.24">TIN 8.24%</option>
+                            <option value="8.25">TIN 8.25%</option>
+                            <option value="8.49">TIN 8.49%</option>
+                            <option value="8.5">TIN 8.5%</option>
+                            <option value="8.74">TIN 8.74%</option>
+                            <option value="8.75">TIN 8.75%</option>
+                            <option value="8.99">TIN 8.99%</option>
+                            <option value="9.23">TIN 9.23%</option>
+                            <option value="9.24">TIN 9.24%</option>
+                            <option value="9.25">TIN 9.25%</option>
+                            <option value="9.49">TIN 9.49%</option>
+                            <option value="9.5">TIN 9.5%</option>
+                            <option value="9.74">TIN 9.74%</option>
+                            <option value="9.75">TIN 9.75%</option>
+                            <option value="9.99">TIN 9.99%</option>
+                            <option value="10.24">TIN 10.24%</option>
+                            <option value="10.25">TIN 10.25%</option>
+                            <option value="10.49">TIN 10.49%</option>
+                            <option value="10.5">TIN 10.5%</option>
+                            <option value="10.74">TIN 10.74%</option>
+                            <option value="10.99">TIN 10.99%</option>
+                            <option value="11.24">TIN 11.24%</option>
+                            <option value="11.99">TIN 11.99%</option>
+                            <option value="12.00">TIN 12.00%</option>
+                            <option value="12.65">TIN 12.65%</option>
+                            <option value="12.77">TIN 12.77%</option>
+                            <option value="12.99">TIN 12.99%</option>
+                            <option value="13.00">TIN 13.00%</option>
+                            <option value="13.13">TIN 13.13%</option>
+                            <option value="13.75">TIN 13.75%</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="guarantee-box section-box" style="margin-top: 10px;">
+                <span style="font-size: 14px; font-weight: 500;">Opciones de Seguro:</span>
+                <div class="radio-group">
+                    <label>
+                        <input type="checkbox" id="sin-garantia"> Excluir seguro
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="btn-calcular" class="btn-primary">CALCULAR</button>
+            </div>
+        </form>
+
+        <div id="results-container" class="results-container hidden">
+            <div class="results-grid">
+                <div class="results-card">
+                    <h2 class="results-title">Financiado (V2)</h2>
+                    <div class="results-header">
+                        <span class="col-code">Código R.</span>
+                        <span class="col-bank">Banco</span>
+                        <span class="col-amount">Cuota</span>
+                    </div>
+                    <div id="results-financiado" class="results-list"></div>
+                </div>
+
+                <div class="results-card">
+                    <h2 class="results-title">Al Contado (V2)</h2>
+                    <div class="results-header">
+                        <span class="col-code">Código R.</span>
+                        <span class="col-bank">Banco</span>
+                        <span class="col-amount">Cuota</span>
+                    </div>
+                    <div id="results-contado" class="results-list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

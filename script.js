@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('calculator-form');
     const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? 'http://localhost:8080' 
-    : 'https://tu-calculadora-api.onrender.com';
+    : 'https://calculadorafinancieraa-1.onrender.com';
 
     // Renderiza cada resultado y aplica color según su posición
     function renderResults(container, data, esConSeguro) {

@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
             plazoFinanciado: parseInt(formData.get('plazoFinanciado')) || 0,
             precioContado: parseFloat(formData.get('precioContado')) || 0,
             tinContado: parseFloat(formData.get('tinContado')) || 0,
-            conGarantia: conGarantia
+            conGarantia: conGarantia,
+            tipoVehiculo: formData.get('tipoVehiculo')
         };
 
         // Validación preliminar del formulario

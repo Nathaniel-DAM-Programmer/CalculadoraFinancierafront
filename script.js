@@ -4,7 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsFinanciado = document.getElementById('results-financiado');
     const resultsContado = document.getElementById('results-contado');
     const form = document.getElementById('calculator-form');
-    
+    const fechaInput = document.querySelector('input[name="fechaMatriculacion"]');
+
+    if (fechaInput) {
+        const hoy = new Date();
+        const yyyy = hoy.getFullYear();
+        const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+        const dd = String(hoy.getDate()).padStart(2, '0');
+        fechaInput.value = `${yyyy}-${mm}-${dd}`;
+    }
+
    // const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     // ? 'http://localhost:8080' 
     // : 'https://calculadorafinancieraa-1.onrender.com';
